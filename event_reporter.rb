@@ -5,9 +5,9 @@ puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 # loop do 
 #   puts "Enter a command, por favor"
-#   command = gets.chomp
+#   user_input = gets.chomp
 
 #   break if command == "exit"
 
-#   puts response(command)
+#   puts response(user_input)
 # end 
