@@ -7,11 +7,11 @@ class ResponseGenerator
   end
 
   def generate_response(user_input)
-
   end 
 
   def load_file(file_name = 'event_attendees.csv')
     @data = FileReader.new.read(file_name)
+    binding.pry
     # @data.count
     # @data.each do |f|
     #   puts f[:first_name]

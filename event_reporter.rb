@@ -1,4 +1,3 @@
-
 puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 puts "Bienvenidos a Event Reporter"
 puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
