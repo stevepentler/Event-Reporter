@@ -22,15 +22,16 @@ class Queue
   end
 
   def queue_print_by(attribute)
-
+    rows = @data.map { |row| row[attribute.to_sym]}
   end
+
 
   def queue_save(file_name = 'event_attendees.csv')
 
   end
 
   def find(attribute, criteria)
-
+    @data.find_all { |row| row[attribute.to_sym] == criteria }.join("\n")
   end
 
   def headers_row
@@ -39,20 +40,22 @@ class Queue
 
   def create_table
     rows = @data.map do |row| 
-      [row[:first_name],
-      row[:last_name],
+      [row[:last_name],
+      row[:first_name],
       row[:email_address],
-      row[:homephone],
-      row[:street],
+      row[:zipcode],
       row[:city],
       row[:state],
-      row[:zipcode]].join("\t")
-
+      row[:street],
+      row[:homephone],
+      ].join("\t")
     end
-    binding.pry
   end
 
 end 
 
 q = Queue.new('sample_attendees.csv')
-q.create_table
+# q.create_table
+# q.queue_print_by('zipcode')
+# q.queue_print_by('street')
+q.find('state', 'DC')
